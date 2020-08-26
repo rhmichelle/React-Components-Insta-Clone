@@ -14,7 +14,7 @@ import dummyData from './dummy-data.js'
 import './App.css';
 
 const App = () => {
-  const [posts] = useState(dummyData)
+  const [posts, setPosts] = useState(dummyData)
   // console.log("Posts", posts);
   // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**.
   // This state is the source of truth for the data inside the app. You won't be needing dummyData anymore.
@@ -32,9 +32,11 @@ const App = () => {
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
-    // setPosts(posts.map((postID) => {
-    //   if (id === postID) {
-    //     return <Post />
+    // setPosts(posts.map((id) => {
+    //   if (post.id === postID) {
+    //     return [...posts.likes] + 1
+    //   } else {
+    //     return posts;
     //   }
     // }))
   };
